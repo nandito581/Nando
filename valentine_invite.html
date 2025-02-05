@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 10%;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff3366;
+        }
+        .hearts {
+            font-size: 2em;
+            animation: floatHearts 2s infinite alternate;
+        }
+        @keyframes floatHearts {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: #ff3366;
+            color: white;
+            font-size: 1.5em;
+        }
+        .no {
+            background-color: #ccc;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will you be my Valentine? ❤️</h1>
+        <div class="hearts">💕 💖 💕</div>
+        <div class="buttons">
+            <button class="yes" onclick="alert('Yay! I love you! ❤️')">Yes!</button>
+            <button class="no" onmouseover="moveButton(this)">why do you hurt me?</button>
+            <button class="no" onmouseover="moveButton(this)">try again?</button>
+            <button class="no" onmouseover="moveButton(this)">Nah</button>
+            <button class="no" onmouseover="moveButton(this)">youre los</button>
+            <button class="no" onmouseover="moveButton(this)">Nope</button>
+            <button class="no" onmouseover="moveButton(this)">Never</button>
+            <button class="no" onmouseover="moveButton(this)">Hmmm</button>
+            <button class="no" onmouseover="moveButton(this)">Ask Later</button>
+            <button class="no" onmouseover="moveButton(this)">Not Sure</button>
+            <button class="no" onmouseover="moveButton(this)">LOL No</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton(button) {
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
